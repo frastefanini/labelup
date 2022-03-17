@@ -1,0 +1,30 @@
+{
+  "product": "confluence",
+  "development": {
+    "port": 3000,
+    "errorTemplate": true,
+    "expressErrorHandling": true,
+    "store": {
+      "adapter": "sequelize",
+      "dialect": "sqlite3",
+      "logging": false,
+      "type": "memory"
+    }
+  },
+  "production": {
+    "port": "$PORT",
+    "errorTemplate": true,
+    "localBaseUrl": "https://labelup.teamripe.net",
+    "store": {
+      "adapter": "redis",
+      "url": "$REDIS_URL",
+      "logging": false
+    },
+    "whitelist": [
+      "*.jira-dev.com",
+      "*.atlassian.net",
+      "*.atlassian.com",
+      "*.jira.com"
+    ]
+  }
+}

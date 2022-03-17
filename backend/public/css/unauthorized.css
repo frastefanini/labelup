@@ -1,0 +1,12 @@
+body {
+  background: #fff
+}
+
+.aui-page-panel {
+  margin: 0;
+  border: none
+}
+
+.aui-page-panel-content {
+  padding: 0
+}

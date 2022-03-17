@@ -1,0 +1,84 @@
+{
+  "key": "com.teamripe.labelup",
+  "name": "Label UP! for Confluence",
+  "description": "Label UP! is a smart app that takes care of labelling your pages for you. Make your content well organized and easy to find.",
+  "vendor": {
+    "name": "Ripe",
+    "url": "https://www.teamripe.com"
+  },
+  "baseUrl": "{{localBaseUrl}}",
+  "links": {
+    "self": "{{localBaseUrl}}/atlassian-connect.json",
+    "homepage": "{{localBaseUrl}}/atlassian-connect.json"
+  },
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed"
+  },
+  "scopes": [
+    "WRITE",
+    "DELETE"
+  ],
+  "modules": {
+    "dialogs": [
+      {
+        "key": "dashboard",
+        "url": "/app/index.html?target=dialog",
+        "cacheable": true,
+        "options": {
+          "chrome": false,
+          "size": "x-large"
+        }
+      }
+    ],
+    "webItems": [
+      {
+        "key": "dashboard-preview",
+        "location": "system.content.button",
+        "url": "/app/index.html?target=inlinedialog",
+        "cacheable": true,
+        "name": {
+          "value": ""
+        },
+        "icon": {
+          "width": 21,
+          "height": 16,
+          "url": "/static/img/labelup-icon.svg"
+        },
+        "target": {
+          "type": "inlinedialog"
+        },
+        "conditions": [
+          {
+            "condition": "user_is_logged_in"
+          },
+          {
+            "or": [
+              {
+                "condition": "has_page"
+              },
+              {
+                "condition": "has_blog_post"
+              }
+            ]
+          },
+          {
+            "condition": "latest_version"
+          },
+          {
+            "condition": "has_page_permission",
+            "params": {
+              "permission": "EDIT"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "apiMigrations": {
+    "context-qsh": true,
+    "gdpr": true
+  }
+}

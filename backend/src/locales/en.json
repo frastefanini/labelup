@@ -1,0 +1,57 @@
+{
+  "app": {
+    "name": "Label UP!",
+    "error": {
+      "AE01": "No license is present.",
+      "AE02": "Current license is invalid for this instance and app."
+    }
+  },
+  "generic": {
+    "GP01": "Success!",
+    "GN11": "Something went wrong.",
+    "GN12": "Invalid request - missing parameters."
+  },
+  "status": {
+    "error": {
+      "SE01": "Failed to retrieve content property.",
+      "SE02": "Current content check failed."
+    },
+    "message": {
+      "SP01": "All ready.",
+      "SP02": "Content property status is pending.",
+      "SN10": "Content version is not the current latest version.",
+      "SN11": "Status not found, property malformed.",
+      "SN12": "Content property version not found, property malformed.",
+      "SN13": "Content property version not matching current content version.",
+      "SN14": "Content property not found."
+    }
+  },
+  "hints": {
+    "error": {
+      "HE04": "Failed to retrieve content property.",
+      "HE05": "Failed to delete content property.",
+      "HE11": "Document body compression failed.",
+      "HE12": "Hints request failed.",
+      "HE13": "Property update failed.",
+      "HE21": "Failed to send message to juicer.",
+      "HEUIL01": "Seems like the language of this page is not yet supported. Check our documentation for supported languages.",
+      "HEUIL02": "We were unable to detect the language of this page. The text might be too short. Write some more and retry.",
+      "HEUIT11": "The content of the page is too short to be able to provide label suggestions. Extend it and retry.",
+      "HEUIG21": "Something went wrong. Please, retry."
+    }
+  },
+  "labels": {
+    "error": {
+      "LE01": "Failed to retrieve confluence labels.",
+      "LE02": "Failed to retrieve hints from content property.",
+      "LE03": "Content property not found.",
+      "LE04": "Label creation failed.",
+      "LE05": "Input missing, provide labels."
+    }
+  },
+  "version": {
+    "error": {
+      "VE01": "Error getting content version."
+    }
+  }
+}
